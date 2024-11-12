@@ -1,0 +1,15 @@
+<div class="col-7 mx-auto card">
+    <a [routerLink]="['/home']">Volver</a>
+    <form #editForm="ngForm">
+        <label>ID Departamento:</label><br/>
+        <input type="text" name="idDepartamento" #cajaid 
+        value="{{departamento.idDepartamento}}"><br/>
+        <label>Nombre:</label><br/>
+        <input type="text" name="nombre" #cajanombre 
+        value="{{departamento.nombre}}"><br/>
+        <label>Localidad:</label><br/>
+        <input type="text" name="localidad" #cajalocalidad
+        value="{{departamento.localidad}}"><br/><br/>
+        <button type="submit" class="btn btn-primary" (click)="editDepartamento()">Editar</button>
+    </form>
+</div>

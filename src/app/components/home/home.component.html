@@ -5,6 +5,7 @@
             <th>Id departamento</th>
             <th>Nombre</th>
             <th>Localidad</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +14,10 @@
             <td>{{dept.idDepartamento}}</td>
             <td>{{dept.nombre}}</td>
             <td>{{dept.localidad}}</td>
+            <td>
+                <button (click)="irDetalles(dept.idDepartamento, dept.nombre, dept.localidad)" class="btn btn-primary">Detalles</button>
+                <a [routerLink]="['/edit', dept.idDepartamento]" class="btn btn-primary">Editar</a>
+            </td>
         </tr>
         }
     </tbody>
